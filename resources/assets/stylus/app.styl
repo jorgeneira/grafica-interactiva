@@ -1,0 +1,181 @@
+@import "includes/mixins.styl"
+@import "includes/variables.styl"
+
+$primaryColor = darkcyan
+$secundaryColor = #92e7e7
+$black = #151516
+
+*
+    box-sizing border-box
+
+html, body
+    margin 0
+    padding 0
+    height 100%
+    width 100%
+
+a
+    text-decoration none
+
+body
+    background-image: url(../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family sans-serif
+    font-size 12px
+
+.flexed
+    display flex
+
+.flexed--center
+    align-items center
+    justify-content center
+
+.home
+    width 100%
+    height 100%
+
+    +e('bg-line')
+        position fixed
+        background rgba(255, 255, 255, 0.6)
+        width 100%
+        height 6px
+        z-index 1
+        box-shadow 1px 1px 20px 10px #fff
+
+    +e('logo')
+        width: 194px;
+        height: 194px;
+        background: $black;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        box-shadow: 1px 1px 16px 16px #fffffd;
+
+.logo
+    display block
+    color #FFF
+    font-size 33px
+    flex-direction column
+    text-align center
+
+    +e('top')
+        margin-bottom 5px
+
+    +e('bottom')
+        text-transform uppercase
+        font-size 50%
+
+    +e('sci')
+        color darkcyan
+
+    +e('fi')
+        color #92e7e7
+
+.intro
+    width 350px
+    height 350px
+    position relative
+
+    +e('btn')
+        width 50px
+        height 50px
+        position absolute
+        background #fffffd
+        z-index 3
+        border-radius 50%
+        display flex
+        justify-content center
+        align-items center
+        font-size 25px
+        box-shadow 1px 1px 16px 16px #e7e4e3
+        transition all 0.5s
+        color $black
+
+
+        &:hover
+            background $secundaryColor
+            box-shadow 1px 1px 16px 16px $primaryColor
+            color #FFF
+
+            .intro__label
+                opacity 1
+
+        +m('a')
+            animation: rotate-a 50s linear infinite;
+
+        +m('b')
+            animation: rotate-b 50s linear infinite;
+
+        +m('c')
+            animation: rotate-c 50s linear infinite;
+
+        +m('d')
+            animation: rotate-d 50s linear infinite;
+
+    +e('icon')
+        animation: keep-position 50s linear infinite;
+
+    +e('label')
+        position absolute
+        background $black
+        width 184px
+        height 184px
+        border-radius 50%
+        display flex
+        justify-content center
+        align-items center
+        color #FFF
+        left -267px
+        opacity 0
+        transition opacity 0.5s
+
+@keyframes rotate-a {
+    from {
+        transform: rotate(0deg) translateX(200px);
+    }
+    to {
+        transform: rotate(360deg) translateX(200px);
+    }
+}
+
+@keyframes rotate-b {
+
+    from {
+        transform: rotate(0deg) translateY(200px);
+    }
+    to {
+        transform: rotate(360deg) translateY(200px);
+    }
+}
+
+@keyframes rotate-c {
+
+    from {
+        transform: rotate(0deg) translateX(-200px);
+    }
+    to {
+        transform: rotate(360deg) translateX(-200px);
+    }
+}
+
+@keyframes rotate-d {
+
+    from {
+        transform: rotate(0deg) translateY(-200px);
+    }
+    to {
+        transform: rotate(360deg) translateY(-200px);
+    }
+}
+
+@keyframes keep-position {
+
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}

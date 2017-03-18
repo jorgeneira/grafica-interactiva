@@ -100,19 +100,32 @@ body
             color #FFF
 
             .intro__label
+                visibility visible
+
+            .intro__label-text
                 opacity 1
 
         +m('a')
-            animation: rotate-a 50s linear infinite;
+            animation: rotate-a 50s linear infinite
+            .intro__label
+                left -267px
 
         +m('b')
             animation: rotate-b 50s linear infinite;
+            .intro__label
+                left: -67px;
+                top: -267px;
 
         +m('c')
             animation: rotate-c 50s linear infinite;
+            .intro__label
+                left 133px
 
         +m('d')
             animation: rotate-d 50s linear infinite;
+            .intro__label
+                left: -67px;
+                top: 133px;
 
     +e('icon')
         animation: keep-position 50s linear infinite;
@@ -123,13 +136,18 @@ body
         width 184px
         height 184px
         border-radius 50%
-        display flex
         justify-content center
         align-items center
         color #FFF
-        left -267px
+        display flex
+        visibility hidden
+
+    +e('label-text')
         opacity 0
-        transition opacity 0.5s
+        transition opacity 1s
+        animation: keep-position 50s linear infinite;
+
+
 
 @keyframes rotate-a {
     from {

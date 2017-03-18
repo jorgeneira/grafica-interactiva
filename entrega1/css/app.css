@@ -102,23 +102,40 @@ body {
   color: #fff;
 }
 .intro__btn:hover .intro__label {
+  visibility: visible;
+}
+.intro__btn:hover .intro__label-text {
   opacity: 1;
 }
 .intro__btn--a {
   -webkit-animation: rotate-a 50s linear infinite;
   animation: rotate-a 50s linear infinite;
 }
+.intro__btn--a .intro__label {
+  left: -267px;
+}
 .intro__btn--b {
   -webkit-animation: rotate-b 50s linear infinite;
   animation: rotate-b 50s linear infinite;
+}
+.intro__btn--b .intro__label {
+  left: -67px;
+  top: -267px;
 }
 .intro__btn--c {
   -webkit-animation: rotate-c 50s linear infinite;
   animation: rotate-c 50s linear infinite;
 }
+.intro__btn--c .intro__label {
+  left: 133px;
+}
 .intro__btn--d {
   -webkit-animation: rotate-d 50s linear infinite;
   animation: rotate-d 50s linear infinite;
+}
+.intro__btn--d .intro__label {
+  left: -67px;
+  top: 133px;
 }
 .intro__icon {
   -webkit-animation: keep-position 50s linear infinite;
@@ -130,17 +147,21 @@ body {
   width: 184px;
   height: 184px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
   color: #fff;
-  left: -267px;
+  display: -webkit-box;
+  display: flex;
+  visibility: hidden;
+}
+.intro__label-text {
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  -webkit-animation: keep-position 50s linear infinite;
+  animation: keep-position 50s linear infinite;
 }
 @-webkit-keyframes rotate-a {
   from {

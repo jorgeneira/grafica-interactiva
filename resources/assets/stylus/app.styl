@@ -1,9 +1,18 @@
 @import "includes/mixins.styl"
 @import "includes/variables.styl"
 
+@font-face {
+    font-family: 'robofan';
+    src: url('../fonts/robofan_free-webfont.woff2') format('woff2'),
+            url('../fonts/robofan_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $primaryColor = darkcyan
 $secundaryColor = #92e7e7
 $black = #151516
+$white = #bcbcbc
 
 *
     box-sizing border-box
@@ -18,12 +27,13 @@ a
     text-decoration none
 
 body
-    background-image: url(../images/bg4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     font-family sans-serif
     font-size 12px
+    background-color $black
+    color $white
+
+.float-right
+    float right
 
 .flexed
     display flex
@@ -31,6 +41,26 @@ body
 .flexed--center
     align-items center
     justify-content center
+
+.btn-primary
+    padding 5px 10px
+    background $primaryColor
+    width auto
+    color #FFF
+    border-radius 5px
+    +m('lg')
+        padding 8px 12px
+
+
+
+.home, .main-header__content, .main-footer__background
+    background-image: url(../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+.main-header__content
+    background-position: center bottom;
 
 .home
     width 100%
@@ -197,3 +227,220 @@ body
         transform: rotate(0deg);
     }
 }
+
+
+.main-header
+    border-top 1px solid rgba(0, 0, 0, 0)
+
+    +e('content')
+        height 620px
+        border-bottom 5px solid $secundaryColor
+
+.top-menu
+    height 50px
+    position relative
+    margin-top 100px
+    width 100%
+
+    +e('content')
+        width 100%
+        max-width 1280px
+        margin 0 auto
+
+    +e('logo')
+        position absolute
+        top -80px
+
+    +e('logo-wrapper')
+        width 190px
+        height 50px
+        background #FFF
+
+
+    +e('btn')
+        color $black
+        height 50px
+        width 175px
+        line-height 50px
+        display flex
+        justify-content space-around
+        background #FFF
+        transition all 0.3s
+
+        &:hover
+            background $secundaryColor
+            box-shadow 1px 1px 8px 8px $primaryColor
+            color #FFF
+            .top-menu__icon
+                color $primaryColor
+
+        +m('inverse')
+            flex-direction row-reverse
+
+            .top-menu__icon
+                margin-right -37px
+                margin-left 0
+
+            .top-menu__label
+                padding-right 0
+                padding-left 40px
+
+    +e('icon')
+        width 50px
+        height 50px
+        margin-left -37px
+        background #fffffd
+        z-index 3
+        border-radius 50%
+        display flex
+        justify-content center
+        align-items center
+        font-size 25px
+        box-shadow 1px 1px 11px 6px #e7e4e3
+        transition all 0.5s
+        color $black
+
+    +e('label')
+        padding-right: 40px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+
+.content-wrap
+    display block
+    position relative
+    width 100%
+    max-width 1200px
+    margin 0 auto
+    margin-top -260px
+
+.featured-block
+    border-top 5px solid $secundaryColor
+    min-height 350px
+    width 100%
+    background url("../images/pattern1.jpg") no-repeat center center
+    background-size cover
+    border-radius 5px
+
+    +e('title')
+        color $primaryColor
+        display block
+        text-transform uppercase
+        text-align center
+        font-family robofan, sans-serif
+        font-weight normal
+        font-size 28px
+
+        &:before, &:after
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 215px;
+            height: 2px;
+            left: 102px;
+            top: 33px;
+            background: #fff;
+
+        &:after
+            left: auto;
+            right: 102px;
+
+        +m('sub')
+            display block
+            font-family sans-serif
+            font-size 80%
+            color $secundaryColor
+
+    +e('movies')
+        display flex
+        align-items center
+        justify-content: center
+        padding-bottom 25px
+
+.movie
+    margin: 0 15px;
+    padding: 15px;
+    border: 1px solid #323232
+    box-shadow: 1px 1px 5px 7px #090909
+    color $secundaryColor
+
+    +e('title')
+        color $primaryColor
+
+    +e('director')
+        margin-bottom 0
+
+.global-separator
+    margin 20px 0
+
+.movie-details
+    background $black
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid $primaryColor;
+    border-right: 1px solid $primaryColor;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 4px 0 $secundaryColor;
+
+    +e('title')
+        color $primaryColor
+        font-size 25px
+        font-family robofan, sans-serif
+        font-weight normal
+        display flex
+        align-items center
+        margin-top 0
+
+    +e('title-icon')
+        color $secundaryColor
+        font-size 15px!important
+        margin-right 15px
+
+    +e('content')
+        display flex
+
+    +e('info')
+        flex 2
+        padding 15px
+
+        table
+            font-family sans-serif
+            font-size 15px
+
+        th, td
+            padding 5px
+
+        th
+            text-align left
+            width 100px
+
+    +e('trailer')
+        flex 3
+        padding 15px
+
+.main-footer
+
+    background #000
+
+    +e('background')
+        background-position: center bottom;
+        height: 350px;
+        border-top: 5px solid #92e7e7;
+        margin-top: -300px;
+        box-shadow 1px 1px 13px -1px $primaryColor
+
+    +e('content')
+        padding 20px 0
+        max-width 1200px
+        margin 0 auto
+        display flex
+        justify-content space-between
+
+    +e('signature')
+        text-align right
+        display flex
+        flex-direction column
+        justify-content center
+
+        a
+            color $primaryColor

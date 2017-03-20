@@ -38,9 +38,12 @@ body
 .flexed
     display flex
 
-.flexed--center
-    align-items center
-    justify-content center
+    +m('center')
+        align-items center
+        justify-content center
+
+    +m('columns')
+        flex-direction column
 
 .btn-primary
     padding 5px 10px
@@ -82,9 +85,6 @@ body
         position: relative;
         z-index: 2;
         box-shadow: 1px 1px 16px 16px #fffffd;
-        +below(960px)
-            width: 134px;
-            height: 134px;
 
 .logo
     display block
@@ -110,6 +110,8 @@ body
     width 350px
     height 350px
     position relative
+    +below(480px)
+        zoom 0.8
 
     +e('btn')
         width 50px
@@ -273,6 +275,8 @@ body
         top -80px
         +below(960px)
             top: -45px;
+            width: 134px;
+            height: 134px;
 
     +e('logo-wrapper')
         width 190px
@@ -509,3 +513,18 @@ body
 
         a
             color $primaryColor
+
+.regular-content
+    font-size 16px
+    margin 15px auto
+    width 100%
+    max-width 960px
+    line-height 25px
+
+    p
+        margin 10px 0
+
+    +e('title')
+        font-size 21px
+        color $secundaryColor
+        margin 20px 0

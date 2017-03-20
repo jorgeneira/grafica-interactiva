@@ -36,6 +36,11 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
 }
+.flexed--columns {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
 .btn-primary {
   padding: 5px 10px;
   background: #008b8b;
@@ -78,12 +83,6 @@ body {
   z-index: 2;
   box-shadow: 1px 1px 16px 16px #fffffd;
 }
-@media only screen and (max-width: 960px) {
-  .home__logo {
-    width: 134px;
-    height: 134px;
-  }
-}
 .logo {
   display: block;
   color: #fff;
@@ -110,6 +109,11 @@ body {
   width: 350px;
   height: 350px;
   position: relative;
+}
+@media only screen and (max-width: 480px) {
+  .intro {
+    zoom: 0.8;
+  }
 }
 .intro__btn {
   width: 50px;
@@ -250,6 +254,8 @@ body {
 @media only screen and (max-width: 960px) {
   .top-menu__logo {
     top: -45px;
+    width: 134px;
+    height: 134px;
   }
 }
 .top-menu__logo-wrapper {
@@ -557,6 +563,21 @@ body {
 }
 .main-footer__signature a {
   color: #008b8b;
+}
+.regular-content {
+  font-size: 16px;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 960px;
+  line-height: 25px;
+}
+.regular-content p {
+  margin: 10px 0;
+}
+.regular-content__title {
+  font-size: 21px;
+  color: #92e7e7;
+  margin: 20px 0;
 }
 @-webkit-keyframes rotate-a {
   from {

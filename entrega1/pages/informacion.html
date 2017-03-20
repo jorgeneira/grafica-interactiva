@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infromación - SciFi Center</title>
+    <link rel="stylesheet" href="../css/slickmap.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+
+<header id="top" class="main-header">
+
+    <div class="logo flexed flexed--center main-header__mobile-logo">
+        <div class="logo__top">
+            <span class="logo__sci">Sci</span><span class="logo__fi">Fi</span>
+        </div>
+        <div class="logo__bottom">
+            Center
+        </div>
+    </div>
+
+    <div class="main-header__content">
+        <nav class="top-menu home__bg-line">
+
+            <div class="top-menu__content flexed flexed--center">
+                <a href="cartelera.html" class="top-menu__btn">
+                <span class="top-menu__icon">
+                    <i class="fa fa-film"></i>
+                </span>
+                    <span class="top-menu__label">En Cartelera</span>
+                </a>
+
+                <a href="estrenos.html" class="top-menu__btn">
+                <span class="top-menu__icon">
+                    <i class="fa fa-calendar"></i>
+                </span>
+                    <span class="top-menu__label">Estrenos</span>
+                </a>
+
+                <div class="top-menu__logo-wrapper flexed flexed--center">
+
+                    <a href="../" class="home__logo top-menu__logo flexed flexed--center">
+
+                        <div class="logo flexed flexed--center">
+                            <div class="logo__top">
+                                <span class="logo__sci">Sci</span><span class="logo__fi">Fi</span>
+                            </div>
+                            <div class="logo__bottom">
+                                Center
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+                <a href="lo-mejor.html" class="top-menu__btn top-menu__btn--inverse">
+                <span class="top-menu__icon">
+                    <i class="fa fa-trophy"></i>
+                </span>
+                    <span class="top-menu__label">Lo Mejor</span>
+                </a>
+
+                <a href="informacion.html" class="top-menu__btn top-menu__btn--inverse">
+                <span class="top-menu__icon">
+                    <i class="fa fa-users"></i>
+                </span>
+                    <span class="top-menu__label">Información</span>
+                </a>
+            </div>
+
+        </nav>
+    </div>
+
+</header>
+
+<main class="content-wrap">
+
+    <section class="featured-block flexed flexed--center flexed--columns">
+        <h1 class="featured-block__title" style="margin-top: 15px">
+            Mapa del Sitio
+        </h1>
+        <ul id="primaryNav" class="col4">
+            <li id="home"><a href="../index.html">Home</a></li>
+            <li><a href="cartelera.html">En Cartelera</a>
+
+                <ul>
+                    <li>
+                        <a href="cartelera.html">
+                            Encuentra las mejores peliculas actualmente en cartelera en Bogotá
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <li><a href="estrenos.html">Estrenos</a>
+
+                <ul>
+                    <li>
+                        <a href="estrenos.html">
+                            Presentamos las películas más esperadas de este año.
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <li><a href="lo-mejor.html">Lo Mejor</a>
+
+                <ul>
+                    <li>
+                        <a href="lo-mejor.html">
+                            Una lista con las mejores películas SciFi
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <li><a href="informacion.html">Información</a>
+
+                <ul>
+                    <li>
+                        <a href="informacion.html">
+                            Encuentra el mapa del Sitio y detalles de la elaboracion de este sitio.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </section>
+
+    <hr class="global-separator">
+
+    <article class="movie-details">
+
+        <h1 class="movie-details__title"><i class="movie-details__title-icon fa fa-star"></i> Aportes y Construccion
+            del Sitio</h1>
+        <br>
+        <div class="regular-content">
+            <p>
+                A continuación se presentan algunos detalles acerca de la construcción de este sitio y algunas
+                consideraciónes que se realizaron en su elaboración.
+            </p>
+
+            <h2 class="regular-content__title">Notación BEM</h2>
+
+            <p>
+                Todo el código CSS y HTML se escribió utilizando la notación BEM (Block - Element - Modifier). Esta
+                convencion resulta una manera conveniente de organizar el código, mejorando su legíbilidad, facilitando
+                la cooperacion entre desarrolladores y generando un código más consistente. BEM establece que son las
+                clases, y no los IDs, las que deben ser usadas para referenciar los elementos
+                html en el código CSS, adicionalmente se debe adoptar una manera particular de construir clases,
+                teniendo en cuenta el tipo de elemento al que se van a aplicar y el significado que las propiedades
+                definidas, en su conjunto, tienen respecto al elemento:</p>
+
+            <div class="flexed">
+
+                <div>
+                    <ul>
+                        <li>
+                            <h3>Block</h3>
+
+                            Un bloque corresponde al contenedor o contexto en el que un elemento se encuentra.
+                            Corresponde a las unidades estructurales más grandes del layout de la página.
+                            Se denota con el nombre de la clase, sin sufijos.
+
+                            <pre>.block</pre>
+
+                        </li>
+                        <li>
+                            <h3>Element</h3>
+
+                            Un elemento es una pieza de bloque. Se deora
+                            <br>
+                            Se denota con el nombre del bloque seguido de 2 barras bajas y el nombre del elemento.
+                            <pre>.block__element</pre>
+                        </li>
+                        <li>
+                            <h3>Modifier</h3>
+
+                            Un modificador corresponde a las variaciones que puede tener un mismo elemento. Se denota
+                            con la clase del elemento seguida de 2 guiones y el nombre de la variacion.
+                            <pre>.block__element--modifier</pre>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </article>
+
+
+    <a class="btn-primary btn-primary--lg float-right" href="#top">
+        <i class="fa fa-arrow-up"></i> Ir Arriba
+    </a>
+
+</main>
+
+<footer class="main-footer">
+
+    <div class="main-footer__background"></div>
+
+    <div class="main-footer__content">
+        <div class="logo flexed flexed--center">
+            <div class="logo__top">
+                <span class="logo__sci">Sci</span><span class="logo__fi">Fi</span>
+            </div>
+            <div class="logo__bottom">
+                Center
+            </div>
+        </div>
+
+        <div class="main-footer__signature">
+            Design By: Jorge Neira Angulo<br>
+            Gráfica Interáctiva - 2017-I <br>
+            <a href="mailto:jeneiraa@unal.edu.co">jeneiraa@unal.edu.co</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

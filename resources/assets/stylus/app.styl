@@ -82,6 +82,9 @@ body
         position: relative;
         z-index: 2;
         box-shadow: 1px 1px 16px 16px #fffffd;
+        +below(960px)
+            width: 134px;
+            height: 134px;
 
 .logo
     display block
@@ -241,21 +244,37 @@ body
     position relative
     margin-top 100px
     width 100%
+    +below(960px)
+        margin-top 70px
+    +below(480px)
+        margin-top 0
+        height auto
 
     +e('content')
         width 100%
         max-width 1280px
         margin 0 auto
+        +below(480px)
+            flex-wrap wrap
+            padding 5px
+            background #FFF
+            height 130px
+
 
     +e('logo')
         position absolute
         top -80px
+        +below(960px)
+            top: -45px;
 
     +e('logo-wrapper')
         width 190px
         height 50px
         background #FFF
-
+        +below(960px)
+            width: 134px;
+        +below(480px)
+            display none
 
     +e('btn')
         color $black
@@ -266,6 +285,12 @@ body
         justify-content space-around
         background #FFF
         transition all 0.3s
+
+        +below(480px)
+            width 50%
+            flex-direction row!important
+            justify-content flex-start
+            align-items center
 
         &:hover
             background $secundaryColor
@@ -299,12 +324,26 @@ body
         box-shadow 1px 1px 11px 6px #e7e4e3
         transition all 0.5s
         color $black
+        +below(960px)
+            margin 0 auto!important
+        +below(480px)
+            margin 0!important
+            width 40px
+            height 40px
+            font-size 21px
 
     +e('label')
         padding-right: 40px;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: bold;
+        +below(960px)
+            display none
+        +below(480px)
+            display block
+            padding 0!important
+            text-align left
+            margin-left 10px
 
 .content-wrap
     display block
@@ -313,6 +352,10 @@ body
     max-width 1200px
     margin 0 auto
     margin-top -260px
+    transition margin-top 0.5s
+
+    +below(1200px)
+        margin-top -450px
 
 .featured-block
     border-top 5px solid $secundaryColor
@@ -340,6 +383,8 @@ body
             left: 102px;
             top: 33px;
             background: #fff;
+            +below(960px)
+                display none
 
         &:after
             left: auto;
@@ -356,6 +401,10 @@ body
         align-items center
         justify-content: center
         padding-bottom 25px
+        +below(480px)
+            flex-wrap wrap
+            & > a
+                width 50%
 
 .movie
     margin: 0 15px;
@@ -363,12 +412,17 @@ body
     border: 1px solid #323232
     box-shadow: 1px 1px 5px 7px #090909
     color $secundaryColor
+    +below(480px)
+        width 87%
 
     +e('title')
         color $primaryColor
 
     +e('director')
         margin-bottom 0
+
+    +e('img')
+        width 100%
 
 .global-separator
     margin 20px 0
@@ -398,6 +452,8 @@ body
 
     +e('content')
         display flex
+        +below(480px)
+            flex-direction column
 
     +e('info')
         flex 2
@@ -435,6 +491,8 @@ body
         margin 0 auto
         display flex
         justify-content space-between
+        +below(1200px)
+            padding 20px
 
     +e('signature')
         text-align right

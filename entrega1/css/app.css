@@ -78,6 +78,12 @@ body {
   z-index: 2;
   box-shadow: 1px 1px 16px 16px #fffffd;
 }
+@media only screen and (max-width: 960px) {
+  .home__logo {
+    width: 134px;
+    height: 134px;
+  }
+}
 .logo {
   display: block;
   color: #fff;
@@ -204,19 +210,53 @@ body {
   margin-top: 100px;
   width: 100%;
 }
+@media only screen and (max-width: 960px) {
+  .top-menu {
+    margin-top: 70px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .top-menu {
+    margin-top: 0;
+    height: auto;
+  }
+}
 .top-menu__content {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 480px) {
+  .top-menu__content {
+    flex-wrap: wrap;
+    padding: 5px;
+    background: #fff;
+    height: 130px;
+  }
+}
 .top-menu__logo {
   position: absolute;
   top: -80px;
+}
+@media only screen and (max-width: 960px) {
+  .top-menu__logo {
+    top: -45px;
+  }
 }
 .top-menu__logo-wrapper {
   width: 190px;
   height: 50px;
   background: #fff;
+}
+@media only screen and (max-width: 960px) {
+  .top-menu__logo-wrapper {
+    width: 134px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .top-menu__logo-wrapper {
+    display: none;
+  }
 }
 .top-menu__btn {
   color: #151516;
@@ -229,6 +269,18 @@ body {
   background: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 480px) {
+  .top-menu__btn {
+    width: 50%;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: row !important;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+  }
 }
 .top-menu__btn:hover {
   background: #92e7e7;
@@ -270,11 +322,37 @@ body {
   transition: all 0.5s;
   color: #151516;
 }
+@media only screen and (max-width: 960px) {
+  .top-menu__icon {
+    margin: 0 auto !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .top-menu__icon {
+    margin: 0 !important;
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+}
 .top-menu__label {
   padding-right: 40px;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
+}
+@media only screen and (max-width: 960px) {
+  .top-menu__label {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .top-menu__label {
+    display: block;
+    padding: 0 !important;
+    text-align: left;
+    margin-left: 10px;
+  }
 }
 .content-wrap {
   display: block;
@@ -283,6 +361,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: -260px;
+  -webkit-transition: margin-top 0.5s;
+  transition: margin-top 0.5s;
+}
+@media only screen and (max-width: 1200px) {
+  .content-wrap {
+    margin-top: -450px;
+  }
 }
 .featured-block {
   border-top: 5px solid #92e7e7;
@@ -312,6 +397,12 @@ body {
   top: 33px;
   background: #fff;
 }
+@media only screen and (max-width: 960px) {
+  .featured-block__title:before,
+  .featured-block__title:after {
+    display: none;
+  }
+}
 .featured-block__title:after {
   left: auto;
   right: 102px;
@@ -331,6 +422,14 @@ body {
   justify-content: center;
   padding-bottom: 25px;
 }
+@media only screen and (max-width: 480px) {
+  .featured-block__movies {
+    flex-wrap: wrap;
+  }
+  .featured-block__movies > a {
+    width: 50%;
+  }
+}
 .movie {
   margin: 0 15px;
   padding: 15px;
@@ -338,11 +437,19 @@ body {
   box-shadow: 1px 1px 5px 7px #090909;
   color: #92e7e7;
 }
+@media only screen and (max-width: 480px) {
+  .movie {
+    width: 87%;
+  }
+}
 .movie__title {
   color: #008b8b;
 }
 .movie__director {
   margin-bottom: 0;
+}
+.movie__img {
+  width: 100%;
 }
 .global-separator {
   margin: 20px 0;
@@ -375,6 +482,13 @@ body {
 .movie-details__content {
   display: -webkit-box;
   display: flex;
+}
+@media only screen and (max-width: 480px) {
+  .movie-details__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
 }
 .movie-details__info {
   -webkit-box-flex: 2;
@@ -416,6 +530,11 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+}
+@media only screen and (max-width: 1200px) {
+  .main-footer__content {
+    padding: 20px;
+  }
 }
 .main-footer__signature {
   text-align: right;

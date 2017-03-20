@@ -26,6 +26,10 @@ body {
 .float-right {
   float: right;
 }
+.no-float {
+  float: none;
+  clear: both;
+}
 .flexed {
   display: -webkit-box;
   display: flex;
@@ -571,6 +575,9 @@ body {
   max-width: 960px;
   line-height: 25px;
 }
+.regular-content a {
+  color: #fff;
+}
 .regular-content p {
   margin: 10px 0;
 }
@@ -578,6 +585,25 @@ body {
   font-size: 21px;
   color: #92e7e7;
   margin: 20px 0;
+}
+.regular-content__col {
+  -webkit-box-flex: 1;
+  flex: 1;
+  padding: 15px;
+}
+.regular-content__col img {
+  width: 100%;
+}
+.regular-content__list h3 {
+  color: #92e7e7;
+  margin: 15px 0;
+}
+@media only screen and (max-width: 960px) {
+  .regular-content__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
 }
 @-webkit-keyframes rotate-a {
   from {

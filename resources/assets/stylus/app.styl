@@ -35,6 +35,10 @@ body
 .float-right
     float right
 
+.no-float
+    float none
+    clear both
+
 .flexed
     display flex
 
@@ -521,6 +525,9 @@ body
     max-width 960px
     line-height 25px
 
+    a
+        color #FFF
+
     p
         margin 10px 0
 
@@ -528,3 +535,19 @@ body
         font-size 21px
         color $secundaryColor
         margin 20px 0
+
+    +e('col')
+        flex 1
+        padding 15px
+
+        img
+            width 100%
+
+    +e('list')
+        h3
+            color $secundaryColor
+            margin 15px 0
+
+    +e('cols')
+        +below(960px)
+            flex-direction column

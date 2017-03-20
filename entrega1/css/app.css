@@ -200,6 +200,15 @@ body {
 .main-header {
   border-top: 1px solid rgba(0,0,0,0);
 }
+.main-header__mobile-logo {
+  margin-bottom: 15px;
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .main-header__mobile-logo {
+    display: block;
+  }
+}
 .main-header__content {
   height: 620px;
   border-bottom: 5px solid #92e7e7;

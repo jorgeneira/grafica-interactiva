@@ -235,6 +235,13 @@ body
 .main-header
     border-top 1px solid rgba(0, 0, 0, 0)
 
+    +e('mobile-logo')
+        margin-bottom 15px
+        display none
+
+        +below(480px)
+            display block
+
     +e('content')
         height 620px
         border-bottom 5px solid $secundaryColor

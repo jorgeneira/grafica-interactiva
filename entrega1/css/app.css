@@ -538,6 +538,11 @@ body {
   flex: 3;
   padding: 15px;
 }
+.movie-details--switch-cols .movie-details__content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+}
 .main-footer {
   background: #000;
 }

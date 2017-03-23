@@ -1,12 +1,60 @@
+/**
+  Hoja de Estilos SciFi Center
+  Escrito Por: Jorge Neira Angulo
+  Gráfica Interactiva - 2017-1
+
+  Notas:
+
+  La presenta hoja de estilos se creó usando la notación BEM
+  https://webdesign.tutsplus.com/es/articles/an-introduction-to-the-bem-methodology--cms-19403
+
+  Todas las propiedades CSS3 y flexbox incluyen su respectiva versión con el
+  prefijo webkit- para maximizar la compatibilidad con Safari.
+
+  Aunque el codigo CSS base se escribio de forma manual, los prefijos webkit se añadieron usando
+  Gulp-Auto prefixer
+
+  https://www.npmjs.com/package/gulp-autoprefixer
+
+ */
+
+
+/**
+  DECLARACIÓN DE FUENTES
+
+  Declaro la fuente que voy a usar para los titulos: Robofan
+
+  En la página tambien use FontAwesome para algunos íconos,
+  pero la declaración va a en otro css, dedicado solo a
+  Fontawesome.
+ */
 @font-face {
   font-family: 'robofan';
   src: url("../fonts/robofan_free-webfont.woff2") format('woff2'), url("../fonts/robofan_free-webfont.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
+/*********************************
+
+  ESTILOS GLOBALES
+
+  Algunos estilos globales importantes para la plantilla en general.
+
+ ********************************/
 * {
+  /**
+  Me parece más conveniente que el navegador incluya el padding y el borde
+  en el tamaño del bloque.
+   */
   box-sizing: border-box;
 }
+/**
+
+  Cómo voy a trabajar con flexbox para la pagina de inicio, es mejor definir
+  el tamaño global de la pagina en 100%, de esa manera puedo usar
+  height: 100% en cualquier elemento.
+
+ */
 html,
 body {
   margin: 0;
@@ -23,6 +71,16 @@ body {
   background-color: #151516;
   color: #bcbcbc;
 }
+/*********************************
+
+  UTILIDADES
+
+  Algunos estilos que no pertenecen ni representan ningún
+  elemento en específico, pero que aportan algunas
+  caracteristicas que pueden ser re-usadas por
+  multiples elementos
+
+ **********************************/
 .float-right {
   float: right;
 }
@@ -55,6 +113,17 @@ body {
 .btn-primary--lg {
   padding: 8px 12px;
 }
+
+/*********************************
+
+  ESTILOS PÁGINA DE INICIO
+
+  El inicio, al no compartir la misma estructura que las páginas internas
+  requiere estilos que solo son usados en esta pagina.
+
+ **********************************/
+
+
 .home,
 .main-header__content,
 .main-footer__background {
@@ -116,15 +185,15 @@ body {
 .logo__fi {
   color: #92e7e7;
 }
+
+/**
+  Estilos relacionados con la animación de la página de inicio.
+ */
+
 .intro {
   width: 350px;
   height: 350px;
   position: relative;
-}
-@media only screen and (max-width: 480px) {
-  .intro {
-    zoom: 0.8;
-  }
 }
 .intro__btn {
   width: 50px;
@@ -212,6 +281,16 @@ body {
   -webkit-animation: keep-position 50s linear infinite;
   animation: keep-position 50s linear infinite;
 }
+
+/*********************************
+
+  ESTILOS PLANTILLA PAGINAS INTERNAS
+
+  Los estilos definidos a continuación son usados por las páginas
+  internas
+
+ **********************************/
+
 .main-header {
   border-top: 1px solid rgba(0,0,0,0);
 }
@@ -219,11 +298,7 @@ body {
   margin-bottom: 15px;
   display: none;
 }
-@media only screen and (max-width: 480px) {
-  .main-header__mobile-logo {
-    display: block;
-  }
-}
+
 .main-header__content {
   height: 620px;
   border-bottom: 5px solid #92e7e7;
@@ -234,55 +309,20 @@ body {
   margin-top: 100px;
   width: 100%;
 }
-@media only screen and (max-width: 960px) {
-  .top-menu {
-    margin-top: 70px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .top-menu {
-    margin-top: 0;
-    height: auto;
-  }
-}
 .top-menu__content {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 480px) {
-  .top-menu__content {
-    flex-wrap: wrap;
-    padding: 5px;
-    background: #fff;
-    height: 130px;
-  }
-}
+
 .top-menu__logo {
   position: absolute;
   top: -80px;
-}
-@media only screen and (max-width: 960px) {
-  .top-menu__logo {
-    top: -45px;
-    width: 134px;
-    height: 134px;
-  }
 }
 .top-menu__logo-wrapper {
   width: 190px;
   height: 50px;
   background: #fff;
-}
-@media only screen and (max-width: 960px) {
-  .top-menu__logo-wrapper {
-    width: 134px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .top-menu__logo-wrapper {
-    display: none;
-  }
 }
 .top-menu__btn {
   color: #151516;
@@ -295,18 +335,6 @@ body {
   background: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-@media only screen and (max-width: 480px) {
-  .top-menu__btn {
-    width: 50%;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-    flex-direction: row !important;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
-  }
 }
 .top-menu__btn:hover {
   background: #92e7e7;
@@ -348,38 +376,14 @@ body {
   transition: all 0.5s;
   color: #151516;
 }
-@media only screen and (max-width: 960px) {
-  .top-menu__icon {
-    margin: 0 auto !important;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .top-menu__icon {
-    margin: 0 !important;
-    width: 40px;
-    height: 40px;
-    font-size: 21px;
-  }
-}
+
 .top-menu__label {
   padding-right: 40px;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
 }
-@media only screen and (max-width: 960px) {
-  .top-menu__label {
-    display: none;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .top-menu__label {
-    display: block;
-    padding: 0 !important;
-    text-align: left;
-    margin-left: 10px;
-  }
-}
+
 .content-wrap {
   display: block;
   position: relative;
@@ -390,11 +394,7 @@ body {
   -webkit-transition: margin-top 0.5s;
   transition: margin-top 0.5s;
 }
-@media only screen and (max-width: 1200px) {
-  .content-wrap {
-    margin-top: -450px;
-  }
-}
+
 .featured-block {
   border-top: 5px solid #92e7e7;
   min-height: 350px;
@@ -423,12 +423,7 @@ body {
   top: 33px;
   background: #fff;
 }
-@media only screen and (max-width: 960px) {
-  .featured-block__title:before,
-  .featured-block__title:after {
-    display: none;
-  }
-}
+
 .featured-block__title:after {
   left: auto;
   right: 102px;
@@ -448,14 +443,7 @@ body {
   justify-content: center;
   padding-bottom: 25px;
 }
-@media only screen and (max-width: 480px) {
-  .featured-block__movies {
-    flex-wrap: wrap;
-  }
-  .featured-block__movies > a {
-    width: 50%;
-  }
-}
+
 .movie {
   margin: 0 15px;
   padding: 15px;
@@ -463,11 +451,7 @@ body {
   box-shadow: 1px 1px 5px 7px #090909;
   color: #92e7e7;
 }
-@media only screen and (max-width: 480px) {
-  .movie {
-    width: 87%;
-  }
-}
+
 .movie__title {
   color: #008b8b;
 }
@@ -509,13 +493,7 @@ body {
   display: -webkit-box;
   display: flex;
 }
-@media only screen and (max-width: 480px) {
-  .movie-details__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-}
+
 .movie-details__info {
   -webkit-box-flex: 2;
   flex: 2;
@@ -562,11 +540,7 @@ body {
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
-@media only screen and (max-width: 1200px) {
-  .main-footer__content {
-    padding: 20px;
-  }
-}
+
 .main-footer__signature {
   text-align: right;
   display: -webkit-box;
@@ -610,13 +584,123 @@ body {
   color: #92e7e7;
   margin: 15px 0;
 }
+/*********************************
+
+  MEDIA QUERIES
+
+  Se definen los media queries usados para ajsutar el diseño
+  a diferentes tamaños de dispositivos.
+
+ **********************************/
+@media only screen and (max-width: 1200px) {
+  .content-wrap {
+    margin-top: -450px;
+  }
+  .main-footer__content {
+    padding: 20px;
+  }
+}
+
 @media only screen and (max-width: 960px) {
   .regular-content__cols {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
   }
+  .top-menu {
+    margin-top: 70px;
+  }
+  .top-menu__logo {
+    top: -45px;
+    width: 134px;
+    height: 134px;
+  }
+  .top-menu__logo-wrapper {
+    width: 134px;
+  }
+  .top-menu__icon {
+    margin: 0 auto !important;
+  }
+  .top-menu__label {
+    display: none;
+  }
+  .featured-block__title:before,
+  .featured-block__title:after {
+    display: none;
+  }
 }
+
+@media only screen and (max-width: 480px) {
+  .intro {
+    zoom: 0.8;
+  }
+
+  .main-header__mobile-logo {
+    display: block;
+  }
+
+  .top-menu {
+    margin-top: 0;
+    height: auto;
+  }
+
+  .top-menu__content {
+    flex-wrap: wrap;
+    padding: 5px;
+    background: #fff;
+    height: 130px;
+  }
+
+  .top-menu__logo-wrapper {
+    display: none;
+  }
+  .top-menu__btn {
+    width: 50%;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: row !important;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .top-menu__icon {
+    margin: 0 !important;
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+  .top-menu__label {
+    display: block;
+    padding: 0 !important;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .featured-block__movies {
+    flex-wrap: wrap;
+  }
+  .featured-block__movies > a {
+    width: 50%;
+  }
+  .movie {
+    width: 87%;
+  }
+  .movie-details__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+}
+
+/*********************************
+
+  FOTOGRAMAS DE ANIMACIONES
+
+  Se definen los fotogramas de las animaciones usadas en la página
+  de inicio
+
+ **********************************/
+
 @-webkit-keyframes rotate-a {
   from {
     -webkit-transform: rotate(0deg) translateX(200px);

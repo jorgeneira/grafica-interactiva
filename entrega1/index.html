@@ -2,15 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SciFi Center</title>
-    <link rel="stylesheet" href="css/app.css?a">
+    <!-- Vinculo el CSS principal -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Vinculo el CSS de font awesome para usar los iconos. -->
     <link rel="stylesheet" href="css/font-awesome.css">
 </head>
+
+<!-- El body debe ser Flex para poder centrar los elementos verticalmente -->
 <body class="home flexed flexed--center">
 
+<!-- Franja blanca-transparente detrás del logo -->
 <div class="home__bg-line"></div>
 
+<!-- El bloque principal que contiene la animación del inicio -->
 <div class="intro flexed flexed--center">
+
+    <!-- Cada uno de los botones de la animacion del inicio -->
 
     <a href="pages/informacion.html" class="intro__btn intro__btn--a">
         <div class="intro__label">
@@ -40,6 +50,8 @@
         <i class=" intro__icon fa fa-film"></i>
     </a>
 
+    <!-- El elemento central, que corresponde al logo de la página. -->
+
     <a href="pages/cartelera.html" class="home__logo flexed flexed--center">
 
         <div class="logo flexed flexed--center">
@@ -52,6 +64,8 @@
         </div>
     </a>
 </div>
+
+<!-- Slogan del sitio -->
 
 <h1 class="home__slogan">Lo mejor del SciFi en la red</h1>
 

@@ -1,0 +1,1 @@
+let mapa = new Phaser.Game(1200, 680, Phaser.CANVAS, "mapaWrap");

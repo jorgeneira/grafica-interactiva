@@ -26,7 +26,11 @@ elixir(mix => {
 
         .browserSync({
 
-            proxy: 'grafica.dev'
+            proxy: 'grafica.dev',
+            files: [
+                'entrega2/**/*.js',
+                'entrega2/**/*.html'
+            ]
 
         });
 });

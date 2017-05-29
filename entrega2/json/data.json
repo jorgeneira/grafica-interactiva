@@ -1,0 +1,1040 @@
+{
+    "minorGods": {
+        "Atenea": {
+            "info": "Diosa de la sabiduría y la guerra. Sus mejoras ayudan a la defensa de la infantería.",
+            "frame": 0
+        },
+        "Hermes": {
+            "info": "Dios de los mensajeros. Sus mejoras benefician a la caballería.",
+            "frame": 1
+        },
+        "Ares": {
+            "info": "Dios de la batalla y la masacre. Sus mejoras afectan el ataque de los soldados humanos.",
+            "frame": 2
+        },
+        "Apolo": {
+            "info": "Dios del sol y de la música. Sus mejoras afectan a los arqueros.",
+            "frame": 3
+        },
+        "Dionisio": {
+            "info": "Dios del vino y la fiesta. Mejoras afectan la caballeria.",
+            "frame": 4
+        },
+        "Afrodita": {
+            "info": "Diosa del Amor y la belleza. Ayuda a los aldeanos.",
+            "frame": 5
+        },
+        "Hefesto": {
+            "info": "Dios de la forja y el trabajo. Mejora las armas y armaduras de soldados humanos.",
+            "frame": 6
+        },
+        "Hera": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 7
+        },
+        "Artemisa": {
+            "info": "Diosa de la caza y la naturaleza. Mejora los arqueros.",
+            "frame": 8
+        },
+        "Bastet": {
+            "info": "Diosa de la sabiduría y la guerra. Sus mejoras ayudan a la defensa de la infantería.",
+            "frame": 9
+        },
+        "Ptah": {
+            "info": "Dios de los mensajeros. Sus mejoras benefician a la caballería.",
+            "frame": 10
+        },
+        "Anubis": {
+            "info": "Dios de la batalla y la masacre. Sus mejoras afectan el ataque de los soldados humanos.",
+            "frame": 11
+        },
+        "Hathor": {
+            "info": "Dios del sol y de la música. Sus mejoras afectan a los arqueros.",
+            "frame": 12
+        },
+        "Sekhmet": {
+            "info": "Dios del vino y la fiesta. Mejoras afectan la caballeria.",
+            "frame": 13
+        },
+        "Neftis": {
+            "info": "Diosa del Amor y la belleza. Ayuda a los aldeanos.",
+            "frame": 14
+        },
+        "Horus": {
+            "info": "Dios de la forja y el trabajo. Mejora las armas y armaduras de soldados humanos.",
+            "frame": 15
+        },
+        "Osiris": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 16
+        },
+        "Thot": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 17
+        },
+        "Forseti": {
+            "info": "Diosa de la sabiduría y la guerra. Sus mejoras ayudan a la defensa de la infantería.",
+            "frame": 18
+        },
+        "Freya": {
+            "info": "Dios de los mensajeros. Sus mejoras benefician a la caballería.",
+            "frame": 19
+        },
+        "Heimdall": {
+            "info": "Dios de la batalla y la masacre. Sus mejoras afectan el ataque de los soldados humanos.",
+            "frame": 20
+        },
+        "Bragi": {
+            "info": "Dios del sol y de la música. Sus mejoras afectan a los arqueros.",
+            "frame": 21
+        },
+        "Skadi": {
+            "info": "Dios del vino y la fiesta. Mejoras afectan la caballeria.",
+            "frame": 22
+        },
+        "Niord": {
+            "info": "Diosa del Amor y la belleza. Ayuda a los aldeanos.",
+            "frame": 23
+        },
+        "Balder": {
+            "info": "Dios de la forja y el trabajo. Mejora las armas y armaduras de soldados humanos.",
+            "frame": 24
+        },
+        "Tyr": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 24
+        },
+        "Hela": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 26
+        },
+        "Prometeo": {
+            "info": "Diosa de la sabiduría y la guerra. Sus mejoras ayudan a la defensa de la infantería.",
+            "frame": 27
+        },
+        "Leto": {
+            "info": "Dios de los mensajeros. Sus mejoras benefician a la caballería.",
+            "frame": 28
+        },
+        "Oceano": {
+            "info": "Dios de la batalla y la masacre. Sus mejoras afectan el ataque de los soldados humanos.",
+            "frame": 29
+        },
+        "Hiperion": {
+            "info": "Dios del sol y de la música. Sus mejoras afectan a los arqueros.",
+            "frame": 30
+        },
+        "Rea": {
+            "info": "Dios del vino y la fiesta. Mejoras afectan la caballeria.",
+            "frame": 31
+        },
+        "Tia": {
+            "info": "Diosa del Amor y la belleza. Ayuda a los aldeanos.",
+            "frame": 32
+        },
+        "Helios": {
+            "info": "Dios de la forja y el trabajo. Mejora las armas y armaduras de soldados humanos.",
+            "frame": 33
+        },
+        "Atlas": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 34
+        },
+        "Hecate": {
+            "info": "Diosa del hogar. Mejora a los edificios y las unidades míticas.",
+            "frame": 35
+        }
+    },
+    "mythUnits": {
+        "Minotauro": {
+            "info": "Hombre toro con ataque de cornada.",
+            "frame": 0
+        },
+        "Centauro": {
+            "info": "Arquero de caballería rápido con ataque esepcial de disparo certero.",
+            "frame": 1
+        },
+        "Ciclope": {
+            "info": "Gigante que arroja unidades enemigas.",
+            "frame": 2
+        },
+        "Manticora": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 3
+        },
+        "Hidra": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 4
+        },
+        "Escila": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 5
+        },
+        "LeonDeNemea": {
+            "info": "El rugido provoca daños a todos los enemigos cercanos.",
+            "frame": 6
+        },
+        "Coloso": {
+            "info": "Contrucción titánica que consume arboles y minas de oro.",
+            "frame": 7
+        },
+        "Medusa": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 8
+        },
+        "Carcinos": {
+            "info": "Crustaceo que destruye barcos.",
+            "frame": 9
+        },
+        "Quimera": {
+            "info": "Puede escupir fuego sobre unidades adyacentes.",
+            "frame": 10
+        },
+        "Esfinge": {
+            "info": "Hombre toro con ataque de cornada.",
+            "frame": 11
+        },
+        "Udjat": {
+            "info": "Arquero de caballería rápido con ataque esepcial de disparo certero.",
+            "frame": 12
+        },
+        "SiervoDeAnubis": {
+            "info": "Gigante que arroja unidades enemigas.",
+            "frame": 13
+        },
+        "Petsuchos": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 14
+        },
+        "Roc": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 15
+        },
+        "Escarabajo": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 16
+        },
+        "Leviatan": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 17
+        },
+        "HombreEscorpion": {
+            "info": "El rugido provoca daños a todos los enemigos cercanos.",
+            "frame": 18
+        },
+        "Vengador": {
+            "info": "Contrucción titánica que consume arboles y minas de oro.",
+            "frame": 19
+        },
+        "Momia": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 20
+        },
+        "Fenix": {
+            "info": "Crustaceo que destruye barcos.",
+            "frame": 21
+        },
+        "TortugaDeGuerra": {
+            "info": "Puede escupir fuego sobre unidades adyacentes.",
+            "frame": 22
+        },
+        "Troll": {
+            "info": "Hombre toro con ataque de cornada.",
+            "frame": 23
+        },
+        "Valkiria": {
+            "info": "Arquero de caballería rápido con ataque esepcial de disparo certero.",
+            "frame": 24
+        },
+        "Einheriar": {
+            "info": "Gigante que arroja unidades enemigas.",
+            "frame": 25
+        },
+        "Jabali": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 26
+        },
+        "GiganteDeLaEscarcha": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 27
+        },
+        "GiganteDeLasMontanas": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 28
+        },
+        "Kraken": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 29
+        },
+        "GiganteDeFuego": {
+            "info": "El rugido provoca daños a todos los enemigos cercanos.",
+            "frame": 30
+        },
+        "Fenris": {
+            "info": "Contrucción titánica que consume arboles y minas de oro.",
+            "frame": 31
+        },
+        "AngulaDeJormund": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 32
+        },
+        "Prometeo": {
+            "info": "Hombre toro con ataque de cornada.",
+            "frame": 33
+        },
+        "Automata": {
+            "info": "Arquero de caballería rápido con ataque esepcial de disparo certero.",
+            "frame": 34
+        },
+        "Caladrias": {
+            "info": "Gigante que arroja unidades enemigas.",
+            "frame": 35
+        },
+        "Siervo": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 36
+        },
+        "Nereida": {
+            "info": "Bestia de ataque a distancia que dispara una ráfaga de pinchos con su cola.",
+            "frame": 37
+        },
+        "Satiro": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 38
+        },
+        "Behemoth": {
+            "info": "Le crecen cabezas a medida que mata soldados y unidades miticas.",
+            "frame": 39
+        },
+        "AveDeEstinfalo": {
+            "info": "El rugido provoca daños a todos los enemigos cercanos.",
+            "frame": 40
+        },
+        "GiganteDeHeka": {
+            "info": "Contrucción titánica que consume arboles y minas de oro.",
+            "frame": 41
+        },
+        "BuqueDeGuerra": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 42
+        },
+        "Argos": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 43
+        },
+        "Lampades": {
+            "info": "Petrifica las unidades a su alcance.",
+            "frame": 44
+        }
+    },
+    "gods": {
+        "Griegos": [
+            {
+                "name": "Zeus",
+                "frame": 0,
+                "powers": [
+                    "Rayo",
+                    "Pegaso"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Atenea",
+                            "Hermes"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Minotauro"
+                            ],
+                            [
+                                "Centauro"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Apolo",
+                            "Dionisio"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Manticora"
+                            ],
+                            [
+                                "Hidra",
+                                "Escila"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hefesto",
+                            "Hera"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Coloso"
+                            ],
+                            [
+                                "Medusa",
+                                "Carcinos"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Hades",
+                "frame": 1,
+                "powers": [
+                    "Centinela",
+                    "Pegaso"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Ares",
+                            "Atenea"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Ciclope"
+                            ],
+                            [
+                                "Minotauro"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Afrodita",
+                            "Apolo"
+                        ],
+                        "mythUnits": [
+                            [
+                                "LeonDeNemea"
+                            ],
+                            [
+                                "Manticora"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Artemisa",
+                            "Hefesto"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Quimera"
+                            ],
+                            [
+                                "Coloso"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Poseidon",
+                "frame": 2,
+                "powers": [
+                    "Senuelo",
+                    "Pegaso",
+                    "CaballoDeMar"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Ares",
+                            "Hermes"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Ciclope"
+                            ],
+                            [
+                                "Centauro"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Afrodita",
+                            "Dionisio"
+                        ],
+                        "mythUnits": [
+                            [
+                                "LeonDeNemea"
+                            ],
+                            [
+                                "Hidra",
+                                "Escila"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Artemisa",
+                            "Hefesto"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Quimera"
+                            ],
+                            [
+                                "Coloso"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Egipcios": [
+            {
+                "name": "Ra",
+                "frame": 3,
+                "powers": [
+                    "Lluvia"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Bastet",
+                            "Ptah"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Esfinge"
+                            ],
+                            [
+                                "Udjat"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hathor",
+                            "Sekhmet"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Petsuchos",
+                                "Roc"
+                            ],
+                            [
+                                "Escarabajo"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Horus",
+                            "Osiris"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Vengador"
+                            ],
+                            [
+                                "Momia"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Isis",
+                "frame": 4,
+                "powers": [
+                    "Prosperidad"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Anubis",
+                            "Bastet"
+                        ],
+                        "mythUnits": [
+                            [
+                                "SiervoDeAnubis"
+                            ],
+                            [
+                                "Esfinge"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hathor",
+                            "Neftis"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Petsuchos",
+                                "Roc"
+                            ],
+                            [
+                                "Leviatan",
+                                "HombreEscorpion"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Osiris",
+                            "Thot"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Momia"
+                            ],
+                            [
+                                "Fenix",
+                                "TortugaDeGuerra"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Set",
+                "frame": 5,
+                "powers": [
+                    "Vision"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Anubis",
+                            "Ptah"
+                        ],
+                        "mythUnits": [
+                            [
+                                "SiervoDeAnubis"
+                            ],
+                            [
+                                "Udjat"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Neftis",
+                            "Sekhmet"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Leviatan",
+                                "HombreEscorpion"
+                            ],
+                            [
+                                "Escarabajo"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Horus",
+                            "Thot"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Vengador"
+                            ],
+                            [
+                                "Fenix",
+                                "TortugaDeGuerra"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Nordicos": [
+            {
+                "name": "Thor",
+                "frame": 6,
+                "powers": [
+                    "MinaDeEnanos"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Forseti",
+                            "Freya"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Troll"
+                            ],
+                            [
+                                "Valkiria"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Bragi",
+                            "Skadi"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Jabali"
+                            ],
+                            [
+                                "GiganteDeLaEscarcha"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Balder",
+                            "Tyr"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeFuego"
+                            ],
+                            [
+                                "Fenris",
+                                "AngulaDeJormund"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Odin",
+                "frame": 7,
+                "powers": [
+                    "BuenaCaza",
+                    "Cuervo"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Freya",
+                            "Heimdall"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Valkiria"
+                            ],
+                            [
+                                "Einheriar"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Bragi",
+                            "Skadi"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeLaEscarcha"
+                            ],
+                            [
+                                "GiganteDeLasMontanas",
+                                "Kraken"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Balder",
+                            "Tyr"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeFuego"
+                            ],
+                            [
+                                "Fenris",
+                                "AngulaDeJormund"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Loki",
+                "frame": 8,
+                "powers": [
+                    "Espia"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Forseti",
+                            "Heimdall"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Troll"
+                            ],
+                            [
+                                "Einheriar"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Bragi",
+                            "Skadi"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Jabali"
+                            ],
+                            [
+                                "GiganteDeLasMontanas",
+                                "Kraken"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hela",
+                            "Tyr"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeLaEscarcha",
+                                "GiganteDeFuego"
+                            ],
+                            [
+                                "Fenris",
+                                "AngulaDeJormund"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Atlantes": [
+            {
+                "name": "Cronos",
+                "frame": 9,
+                "powers": [
+                    "Deconstruccion"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Prometeo",
+                            "Leto"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Prometeo"
+                            ],
+                            [
+                                "Automata"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hiperion",
+                            "Rea"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Nereida",
+                                "Satiro"
+                            ],
+                            [
+                                "Behemoth"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Helios",
+                            "Tyr"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeHeka",
+                                "BuqueDeGuerra"
+                            ],
+                            [
+                                "Argos"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Urano",
+                "frame": 10,
+                "powers": [
+                    "OndaExpansiva"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Oceano",
+                            "Prometeo"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Caladrias",
+                                "Siervo"
+                            ],
+                            [
+                                "Prometeo"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Hiperion",
+                            "Tia"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Nereida",
+                                "Satiro"
+                            ],
+                            [
+                                "AveDeEstinfalo"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Helios",
+                            "Tyr"
+                        ],
+                        "mythUnits": [
+                            [
+                                "GiganteDeHeka",
+                                "BuqueDeGuerra"
+                            ],
+                            [
+                                "Lampades"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Gea",
+                "frame": 11,
+                "powers": [
+                    "BosqueDeGea"
+                ],
+                "ages": [
+                    {
+                        "minorGods": [
+                            "Oceano",
+                            "Leto"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Caladrias",
+                                "Siervo"
+                            ],
+                            [
+                                "Automata"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Tia",
+                            "Rea"
+                        ],
+                        "mythUnits": [
+                            [
+                                "AveDeEstinfalo"
+                            ],
+                            [
+                                "Behemoth"
+                            ]
+                        ]
+                    },
+                    {
+                        "minorGods": [
+                            "Atlas",
+                            "Hecate"
+                        ],
+                        "mythUnits": [
+                            [
+                                "Argos"
+                            ],
+                            [
+                                "Lampades"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "powers": {
+        "Rayo": {
+            "info": "Un rayo cae del cielo y mata una unidad.",
+            "frame": 0
+        },
+        "Pegaso": {
+            "info": "Explorador Volador.",
+            "frame": 1
+        },
+        "Centinela": {
+            "info": "Guardianes de piedra arqueros.",
+            "frame": 2
+        },
+        "Senuelo": {
+            "info": "Atrae animales para cazar.",
+            "frame": 3
+        },
+        "CaballoDeMar": {
+            "info": "Explorador del oceano.",
+            "frame": 4
+        },
+        "Lluvia": {
+            "info": "Mejora las cosechas.",
+            "frame": 5
+        },
+        "Prosperidad": {
+            "info": "Recolecta oro más rapido.",
+            "frame": 6
+        },
+        "Vision": {
+            "info": "Revela una parte del mapa.",
+            "frame": 7
+        },
+        "MinaDeEnanos": {
+            "info": "Crea una mina de oro mágica.",
+            "frame": 8
+        },
+        "BuenaCaza": {
+            "info": "Multiplica los animales de caza.",
+            "frame": 9
+        },
+        "Cuervo": {
+            "info": "Explorador aereo.",
+            "frame": 10
+        },
+        "Espia": {
+            "info": "Comparte el campo de vision de una unidad enemiga.",
+            "frame": 11
+        },
+        "Deconstruccion": {
+            "info": "Destruye un edificio enemigo.",
+            "frame": 12
+        },
+        "OndaExpansiva": {
+            "info": "Aturde enemigos simultaneamente.",
+            "frame": 13
+        },
+        "BosqueDeGea": {
+            "info": "Bosque que genera más madera.",
+            "frame": 14
+        }
+    }
+}

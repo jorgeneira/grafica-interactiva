@@ -10,8 +10,6 @@ let homeState = {
 
         mapState: 'Iniciar Mapa',
 
-        infoState: 'Información del Juego',
-
         creditsState: 'Créditos'
     },
 

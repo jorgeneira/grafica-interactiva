@@ -3,39 +3,43 @@ let mapState = {
     config: {
 
         labelStyle: {
-
             font: "bold 15px Arial",
-
             fill: "#FFFFFF"
-
         },
 
         godNameStyle: {
-
             font: "bold 17px Arial",
-
             fill: "#BFA414"
-
         },
 
         subTitleStyle: {
             font: "17px Arial",
-
             fill: "#FFFFFF"
         },
 
         descriptionStyle: {
-
-            font: "15px Arial",
-
-            fill: "#FFFFFF",
-
+            font        : "15px Arial",
+            fill        : "#FFFFFF",
             boundsAlignH: "left",
-
             boundsAlignV: "top",
+            align       : "left"
+        },
 
-            align: "left"
-        }
+        areaInfoX: 687,
+
+        areaInfoY: 88,
+
+        ageWidth: 390,
+
+        ageHeight: 150,
+
+        ageSpacer: 15,
+
+        ageElementSpacerX: 20,
+
+        ageElementSpacerY: 10,
+
+        ages: ['Edad Arcaica', 'Edad Clásica', 'Edad Heróica']
 
     },
 
@@ -73,47 +77,10 @@ let mapState = {
 
             .addBackBtn()
 
-            .setData();
+            .setData()
 
+            .addGods();
 
-        this.addGods();
-
-    },
-
-    addGods() {
-
-        Object.keys(this.data.gods).forEach(this.addCivGods, this);
-
-    },
-
-    addCivGods(civName, civIndex){
-
-        let civX = 100;
-
-        let civY = 120 + (150 * civIndex);
-
-        game.add.text(civX, civY, civName, this.config.labelStyle);
-
-        this.data.gods[civName]
-            .forEach((g, gI) => this.addSingleCivGod(g, gI, civX, civY), this);
-
-    },
-
-    addSingleCivGod(god, godIndex, civX, civY){
-
-        let godX = civX + 110 + (140 * godIndex);
-
-        let godY = civY - 50;
-
-        let godBtn = game.add.button(godX, godY, 'gods', () => this.showGodData(god), this, god.frame, god.frame);
-
-        godBtn.events.onInputOver.add(() => this.showDescription(god.name), this);
-
-        godBtn.events.onInputOut.add(this.hideDescription, this);
-
-        game.add.text(godX + 64, godY + 128, god.name, this.config.godNameStyle)
-            .anchor
-            .setTo(0.5, 0);
     },
 
     addMainBackground() {
@@ -144,73 +111,100 @@ let mapState = {
 
         this.data = game.cache.getJSON('data');
 
-        console.log(this.data);
-
         return this;
 
     },
 
-    buildArcaica(god){
+    addGods() {
 
-        let bg1 = game.add.graphics(687, 88).beginFill(0x365A5A).drawRect(0, 0, 390, 150).endFill();
-
-        let godName = game.add.text(882, 93, god.name.toUpperCase(), this.config.godNameStyle);
-        godName.anchor.setTo(0.5, 0);
-
-        let arcaica = game.add.text(882, 120, 'Edad Arcaica', this.config.subTitleStyle);
-        arcaica.anchor.setTo(0.5, 0);
-
-        this.activeGodInfo.add(bg1);
-
-        this.activeGodInfo.add(godName);
-
-        this.activeGodInfo.add(arcaica);
-
-        god.powers.forEach((p, pI) => this.addPower(p, pI, god), this);
-
-        return this;
+        Object.keys(this.data.gods).forEach(this.addCivGods, this);
 
     },
 
-    buildClasica(god){
+    addCivGods(civName, civIndex){
 
-        let bg1 = game.add.graphics(687, 255).beginFill(0x365A5A).drawRect(0, 0, 390, 150).endFill();
+        let civX = 100;
 
-        let ageName = game.add.text(882, 265, 'Edad Clásica', this.config.subTitleStyle);
-        ageName.anchor.setTo(0.5, 0);
+        let civY = 120 + (150 * civIndex);
 
-        this.activeGodInfo.add(bg1);
+        game.add.text(civX, civY, civName, this.config.labelStyle);
 
-        this.activeGodInfo.add(ageName);
-
-        god.ages[0].minorGods.forEach((mg, mgI) => this.addMinorGod(255, mg, mgI, god.ages[0].minorGods), this);
-
-        let mythUnits = god.ages[0].mythUnits[0].concat(god.ages[0].mythUnits[1]);
-
-        mythUnits.forEach((mg, mgI) => this.addMythUnit(255, mg, mgI, mythUnits), this);
-
-        return this;
+        this.data.gods[civName]
+            .forEach((g, gI) => this.addSingleCivGod(g, gI, civX, civY), this);
 
     },
 
-    buildHeroica(god){
+    addSingleCivGod(god, godIndex, civX, civY){
 
-        let bg1 = game.add.graphics(687, 423).beginFill(0x365A5A).drawRect(0, 0, 390, 150).endFill();
+        let godX = civX + 110 + (140 * godIndex);
 
-        let ageName = game.add.text(882, 433, 'Edad Heróica', this.config.subTitleStyle);
-        ageName.anchor.setTo(0.5, 0);
+        let godY = civY - 50;
+
+        let godBtn = game.add.button(godX, godY, 'gods', () => {
+
+            return this.showGodData(god);
+
+        }, this, god.frame, god.frame);
+
+        godBtn.events.onInputOver.add(() => {
+
+            return this.showDescription(god.name + '\n\nClick para más Info!');
+
+        }, this);
+
+        godBtn.events.onInputOut.add(this.hideDescription, this);
+
+        game.add.text(godX + 64, godY + 128, god.name, this.config.godNameStyle)
+            .anchor
+            .setTo(0.5, 0);
+    },
+
+    buildAge(god, ageName, ageIndex){
+
+        let ageBaseY = this.config.areaInfoY + (this.config.ageHeight + this.config.ageSpacer) * ageIndex;
+
+        let bg1 = game.add.graphics(this.config.areaInfoX, ageBaseY)
+            .beginFill(0x365A5A)
+            .drawRect(0, 0, this.config.ageWidth, this.config.ageHeight)
+            .endFill();
+
+        let ageHeadingX = this.config.areaInfoX + (this.config.ageWidth / 2);
+
+        let ageHeadingY = ageIndex ? ageBaseY + 10 : ageBaseY + 32;
+
+        let ageHeading = game.add.text(ageHeadingX, ageHeadingY, ageName, this.config.subTitleStyle);
+        ageHeading.anchor.setTo(0.5, 0);
 
         this.activeGodInfo.add(bg1);
 
-        this.activeGodInfo.add(ageName);
+        this.activeGodInfo.add(ageHeading);
 
-        god.ages[1].minorGods.forEach((mg, mgI) => this.addMinorGod(423, mg, mgI, god.ages[1].minorGods), this);
+        if (ageIndex === 0) {
 
-        let mythUnits = god.ages[1].mythUnits[0].concat(god.ages[1].mythUnits[1]);
+            let godName = game.add.text(ageHeadingX, ageBaseY + 5, god.name.toUpperCase(), this.config.godNameStyle);
+            godName.anchor.setTo(0.5, 0);
 
-        mythUnits.forEach((mg, mgI) => this.addMythUnit(423, mg, mgI, mythUnits), this);
+            god.powers.forEach((p, pI) => this.addAgeElement(ageBaseY, 'powers', p, pI, 64, god.powers), this);
 
-        return this;
+            this.activeGodInfo.add(godName);
+
+        } else {
+
+            god.ages[ageIndex - 1].minorGods.forEach((mg, mgI) => {
+
+                return this.addAgeElement(ageBaseY, 'minorGods', mg, mgI, 64, god.ages[ageIndex - 1].minorGods);
+
+            }, this);
+
+            let mythUnits = god.ages[ageIndex - 1].mythUnits[0].concat(god.ages[ageIndex - 1].mythUnits[1]);
+
+            mythUnits.forEach((mg, mgI) => {
+
+                return this.addAgeElement(ageBaseY, 'mythUnits', mg, mgI, 32, mythUnits);
+
+            }, this);
+
+        }
 
     },
 
@@ -220,89 +214,35 @@ let mapState = {
 
         this.activeGodInfo = game.add.group();
 
-        this.buildArcaica(god)
-
-            .buildClasica(god)
-
-            .buildHeroica(god);
-
+        this.config.ages.forEach((ageName, ageIndex) => this.buildAge(god, ageName, ageIndex));
 
     },
 
-    addPower(powerName, powerIndex, god){
+    addAgeElement(ageY, type, name, index, size, elementSet){
 
-        let spacer = 10;
+        let elementsWidth = (elementSet.length * size) + (elementSet.length - 1) * this.config.ageElementSpacerX;
 
-        let powersWidth = (god.powers.length * 64) + (god.powers.length - 1) * spacer;
+        let elementsStartX = (this.config.areaInfoX + this.config.ageWidth / 2) - (elementsWidth / 2);
 
-        let powersStartX = 882 - (powersWidth / 2);
+        let elementX = elementsStartX + (size + this.config.ageElementSpacerX) * index;
 
-        let powerX = powersStartX + (64 + spacer) * powerIndex;
+        let spacerY = type === 'mythUnits' ? 64 + this.config.ageElementSpacerY : 0;
 
-        let power = game.add.sprite(powerX, 160, 'powers');
+        let elementY = type === 'powers' ? ageY + 72 : ageY + 35;
 
-        power.frame = this.data.powers[powerName].frame;
+        let element = game.add.sprite(elementX, elementY + spacerY, type);
 
-        power.inputEnabled = true;
+        element.frame = this.data[type][name].frame;
 
-        power.events.onInputOver.add(() => this.showDescription(this.data.powers[powerName].info), this);
+        element.inputEnabled = true;
 
-        power.events.onInputOut.add(this.hideDescription, this);
+        element.input.useHandCursor = true;
 
-        this.activeGodInfo.add(power);
+        element.events.onInputOver.add(() => this.showDescription(this.data[type][name].info), this);
 
-    },
+        element.events.onInputOut.add(this.hideDescription, this);
 
-    addMinorGod(ageY, minorGodName, minorGodIndex, minorGods){
-
-        let spacer = 20;
-
-        let minorGodsWidth = (minorGods.length * 64) + (minorGods.length - 1) * spacer;
-
-        let minorGodsStartX = 882 - (minorGodsWidth / 2);
-
-        let minorGodX = minorGodsStartX + (64 + spacer) * minorGodIndex;
-
-        let minorGod = game.add.sprite(minorGodX, ageY + 35, 'minorGods');
-
-        minorGod.frame = this.data.minorGods[minorGodName].frame;
-
-        minorGod.inputEnabled = true;
-
-        minorGod.input.useHandCursor = true;
-
-        minorGod.events.onInputOver.add(() => this.showDescription(this.data.minorGods[minorGodName].info), this);
-
-        minorGod.events.onInputOut.add(this.hideDescription, this);
-
-        this.activeGodInfo.add(minorGod);
-
-    },
-
-    addMythUnit(ageY, mythUnitName, mythUnitIndex, mythUnits){
-
-        let spacer = 20;
-
-        let mythUnitsWidth = (mythUnits.length * 32) + (mythUnits.length - 1) * spacer;
-
-        let mythUnitsStartX = 882 - (mythUnitsWidth / 2);
-
-        let mythUnitX = mythUnitsStartX + (32 + spacer) * mythUnitIndex;
-
-        let mythUnit = game.add.sprite(mythUnitX, ageY + 109, 'mythUnits');
-
-        mythUnit.frame = this.data.mythUnits[mythUnitName].frame;
-
-        mythUnit.inputEnabled = true;
-
-        mythUnit.input.useHandCursor = true;
-
-        mythUnit.events.onInputOver.add(() => this.showDescription(this.data.mythUnits[mythUnitName].info), this);
-
-        mythUnit.events.onInputOut.add(this.hideDescription, this);
-
-        this.activeGodInfo.add(mythUnit);
-
+        this.activeGodInfo.add(element);
     },
 
     showDescription(text){
@@ -311,7 +251,10 @@ let mapState = {
 
         this.activeDescription = game.add.group();
 
-        let bg1 = game.add.graphics(687, 595).lineStyle(5, 0xBFA414, 1).beginFill(0x365A5A).drawRect(0, 0, 390, 90).endFill();
+        let bg1 = game.add.graphics(687, 595).lineStyle(5, 0xBFA414, 1)
+            .beginFill(0x365A5A)
+            .drawRect(0, 0, 390, 90)
+            .endFill();
 
         let description = game.add.text(695, 605, text, this.config.descriptionStyle);
 

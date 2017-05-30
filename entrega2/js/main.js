@@ -4,6 +4,6 @@ game.state.add('homeState', homeState);
 game.state.add('mapState', mapState);
 game.state.add('creditsState', creditsState);
 
-game.state.start('creditsState');
+game.state.start('homeState');
 
 
